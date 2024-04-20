@@ -1,67 +1,32 @@
-# devSite1
+# ModuleIOT
 
-## Online
+TEST RÉALISÉ SOUS PHP 7.4 & SYMFONY 5.4
 
-&nbsp;
+1. Créer le fichier `.env.local`.
 
-pour accéder au site en ligne se rendre sur cette adresse  
+2. Dans ce fichier, entrer l'URL de la base de données avec ses identifiants selon le format suivant :
+    ```
+    DATABASE_URL=mysql://username:password@localhost:3306/nom_de_la_base_de_donnees
+    ```
+   Remplacez `username`, `password` et `nom_de_la_base_de_donnees` par vos propres informations.
 
-https://redanedev.fr/moduleiot/
+3. Installer composer, exécutez la commande suivante dans le terminal :
+   ```
+   composer install
+   ```
+   
+4. Pour créer la base de données, exécutez la commande suivante dans le terminal :
+    ```
+    php bin/console doctrine:database:create
+    ```
+    Suivez les instructions et entrez "Yes" lorsque vous y êtes invité.
 
-pour accéder à la base de donnée en ligne se rendre sur cette adresse
+5. Pour créer les tables et les champs via les migrations, exécutez la commande suivante :
+    ```
+    php bin/console doctrine:migrations:migrate
+    ```
 
-https://phpmyadmin.redanedev.fr/
+7. Enfin, lancez votre serveur local PHP ou Symfony pour exécuter l'application.
 
-Voici les identifiants pour accéder à la base de donnée
+8. Pour acceder à l'application il faut : votrelocalhost/moduleiot
 
-- user:
-
-        webreathe
-
-- password:
-
-        webreathe
-
-&nbsp;
-
-## Installation
-
-&nbsp;
-
-### Prérequis
-
-&nbsp;
-
-***php*** => 7.4
-
-***composer*** => 2.3.9
-
-***BDD*** => mariadb-10.6.7
-
-&nbsp;
-
-### Téléchargement
-
-&nbsp;
-
-Télécharger le projet zipper depuis cette url
-
-https://www.swisstransfer.com/d/3ac0ab81-1a73-4d32-bf3f-7a990186f3d1
-
-&nbsp;
-
-### Déployement
-
-&nbsp;
-
-à la racine du projet tapez
-
-        composer install
-
-créer le fichier ***.env.local*** à la racine du projet et y mettre ceci
-
-        APP_ENV=prod
-        APP_SECRET=b879d89158a8b501fbb46d98b469cc4d
-        DATABASE_URL="mysql://user:password@127.0.0.1:3306/devSite1?serverVersion=mariadb-10.6.7&charset=utf8mb4"
-
-Dans la variable **DATABASE_URL** remplacer **user** par le nom de l'utilisateur de la base de donnée et **password** par le mot de passe de l'utilisateur de la base de donnée

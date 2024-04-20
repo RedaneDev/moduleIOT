@@ -1,0 +1,50 @@
+.connected {
+    background-color:rgb(84, 136, 84);
+    color: rgb(84, 136, 84);
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    padding:3px;
+}
+.disconnected {
+    background-color:rgb(215, 49, 49);
+    color: rgb(215, 49, 49);
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    padding:3px;
+}
+
+.button_container {
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+.module_selector {
+    width:300px;
+}
+
+#module_data_info {
+    margin-bottom:40px;
+    margin-top:20px;
+    display:none;
+}
+
+#chartWrapper{
+    width:50%;
+    border: solid 1px;
+    display:none;
+}
+
+.delete_buttons{
+    margin-top: 20px;
+}
+
+.delete-module{
+    display: none
+}
+
+
+.delete-type{
+    display: none;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        {% block basestylesheets %}
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+            <link rel="stylesheet" href="{{ asset('assets/css/bootstrap_css/bootstrap.css')}}">
+            <link rel="stylesheet" href="{{ asset('assets/css/bootstrap_css/bootstrap_toggle.min.css')}}">
+            <link rel="stylesheet" href="{{ asset('assets/css/global.css')}}">
+            <link rel="stylesheet" href="{{ asset('assets/css/noty.css')}}">
+            
+
+            {% block stylesheets %}{% endblock %}
+
+        {% endblock %}
+
+    </head>
+
+    <body>
+
+    {% block basebody %}
+
+        {% block body %}{% endblock %}
+
+    {% endblock %}
+
+    {% block basejavascripts %}
+        <script src="{{ asset('assets/js/libs/jquery.js') }}"></script>
+        <script src="{{ asset('assets/js/libs/jquery.waypoints.min.js') }}"></script>
+        <script src="{{ asset('assets/js/bootstrap_js/bootstrap.js') }}"></script>
+        <script src="{{ asset('assets/js/bootstrap_js/bootstrap_toggle.min.js') }}"></script>
+        <script src="{{ asset('assets/js/libs/noty.min.js') }}"></script>
+
+        {% block javascripts %}{% endblock %}
+
+    {% endblock %}
+    </body>
+    
+</html>
